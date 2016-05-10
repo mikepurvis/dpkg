@@ -1,4 +1,4 @@
-dpkg (1.18.4-1~mikepurvis) trusty; urgency=medium
+dpkg (1.18.4~mikepurvis) trusty; urgency=medium
 
   * Backport to Trusty.
 
