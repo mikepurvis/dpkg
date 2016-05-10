@@ -13,7 +13,6 @@ usr/bin/dpkg-statoverride
 usr/bin/dpkg-trigger
 usr/bin/update-alternatives
 usr/share/dpkg/*table
-usr/share/locale/*/LC_MESSAGES/dpkg.mo
 var/lib/dpkg/alternatives
 var/lib/dpkg/info
 var/lib/dpkg/parts

@@ -61,6 +61,8 @@ build-tree/config.status: configure
 		--with-devlibdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
 		--with-zlib \
 		--with-liblzma \
+		--disable-dselect \
+		--disable-nls \
 		--with-bz2
 
 # Build the package in build-tree
@@ -107,10 +109,6 @@ binary-arch: install
 	dh_install -a
 	dh_installcron -a
 	dh_installlogrotate -a
-	dh_installchangelogs -a ChangeLog*
-	dh_installdocs -a
-	$(call dpkg-installmanl10n,dpkg)
-	$(call dpkg-installmanl10n,dselect)
 	dh_installman -a
 	dh_link -a
 	dh_lintian -a
@@ -132,9 +130,6 @@ binary-indep: install
 	dh_testroot -i
 	dh_install -i
 	dh_installcron -i
-	dh_installchangelogs -i ChangeLog*
-	dh_installdocs -i
-	$(call dpkg-installmanl10n,dpkg-dev)
 	dh_installman -i
 	dh_link -i
 	dh_lintian -i
