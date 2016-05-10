@@ -165,7 +165,7 @@ sub _add_reproducible_flags {
 
     # Warn when the __TIME__, __DATE__ and __TIMESTAMP__ macros are used.
     if ($use_feature{timeless}) {
-       $flags->append('CPPFLAGS', '-Wdate-time');
+       # $flags->append('CPPFLAGS', '-Wdate-time');
     }
 
     # Store the feature usage.
